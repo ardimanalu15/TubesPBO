@@ -14,13 +14,18 @@ import java.sql.SQLException;
  * @author ardi manalu
  */
 public class Toko_Buah {
-    
+   
   private static Connection koneksi;
   public static Connection tokobuahDB()throws SQLException {
       try {
-          String url = "jdbc:mysql://localhost:3306/tokobuah";
-          String user = "root";
-          String password = "";
+        String url; 
+       String user; 
+      String password ;
+              url = "jdbc:mysql://localhost:3306/tokobuah";
+    
+              user = "root";
+          
+              password = "";
           
           DriverManager.registerDriver(new com.mysql.jdbc.Driver());
           koneksi = DriverManager.getConnection(url, user, password);
